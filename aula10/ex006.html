@@ -35,12 +35,17 @@
     <title>DOM Events</title>
 </head>
 <body>
-    <div id="area" onclick="Click()" onmouseenter="Enter()" onmouseleave="toGoOut()">
+    <!--<div id="area" onclick="Click()" onmouseenter="Enter()" onmouseleave="toGoOut()">-->
+    <div id="area">
         <p>Interact</p>
     </div>
     <script>
         var a = document.getElementsByTagName('p');
         var box = document.getElementById('area')
+
+        box.addEventListener('click', Click)
+        box.addEventListener('mouseenter', Enter)
+        box.addEventListener('mouseout', toGoOut)
 
         function Click() {
             a[0].innerText = 'Clicked!';
