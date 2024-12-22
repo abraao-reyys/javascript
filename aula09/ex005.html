@@ -19,12 +19,12 @@
     <p>Here is the result.</p>
     <P>Learning to use the DOM in JavaScript.</P>
     <div id="clickbutton">Click me</div>
-    <p>JavaScript will write below:</p>
+    <p id="msg">JavaScript will write below:</p>
     <script>
         // Adicionei algumas variáveis para citar elas.
         var body = window.document.body
         var p1 = window.document.getElementsByTagName('p')[0]
-        var p2 = window.document.getElementsByTagName('p')[1]
+        var p2 = window.document.getElementsByTagName('p')[1] //Selecionou pela Tag
 
         p1.style.color = 'yellow'
         p2.style.color = 'black'
@@ -35,11 +35,14 @@
         document.write(p1.innerHTML + '<br>')
         document.write(p2.innerHTML)
 
-        var b = window.document.getElementById('clickbutton')
+        var b = window.document.getElementById('clickbutton') // Selecionou o ID do elemento
         b.style.color ='black'
         b.style.backgroundColor = 'white'
         b.style.width = '200px'
         b.innerText = 'I changed the text'
+
+        var m = window.document.querySelector('p#msg') // Selecionou o seletor CSS
+        m.style.color = 'yellow'
     </script>
 </body>
 </html>
