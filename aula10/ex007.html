@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div#output {
+            height: 20px;
+            width: 30px;
+            border: 1px solid black;
+        }
+
+        input {
+            width: 60px;
+        }
+    </style>
+
+    <title>Sum Values</title>
+</head>
+<body>
+    <h1>Sum of Values</h1>
+    <input type="number" name="n1" id="n1">
+    <label for="number">+</label>
+    <input type="number" name="n2" id="n2">
+    <input type="submit" value="Execute" onclick="Sum()">
+    <input type="submit" value="Clear" onclick="Clear()">
+    <div id="rst"></div>
+    <script>
+        var n1 = window.document.getElementById('n1');
+        var n2 = window.document.getElementById('n2');
+        var calc = window.document.getElementById('rst');
+
+        function Sum() {
+            var result = Number(n1.value) + Number(n2.value)
+            calc.innerHTML = `A soma entre ${n1.value} e ${n2.value} é <strong>${result}<strong>!`
+        }
+
+        function Clear() {
+            calc.innerHTML = ''
+        }
+    </script>
+</body>
+</html>
