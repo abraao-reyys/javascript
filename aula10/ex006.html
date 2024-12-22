@@ -5,21 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        html, body {
+            height: 100vh;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         div#area {
-            width: 70px;
-            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
             color: white;
             background-color: green;
-            font-family: arial;
-            font-weight: bold;
+            cursor: pointer;
+        }
+
+        div#area p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.4em;
+            padding: 10px;
+            border: 1px solid white;
         }
     </style>
 
     <title>DOM Events</title>
 </head>
 <body>
-    <div id="area">
-        Interact...
+    <div id="area" onclick="Click()" onmouseenter="Enter()" onmouseleave="toGoOut()">
+        <p>Interact</p>
     </div>
+    <script>
+        var a = document.getElementsByTagName('p');
+        var box = document.getElementById('area')
+
+        function Click() {
+            a[0].innerText = 'Clicked!';
+            box.style.backgroundColor = 'red'
+        }
+        function Enter() {
+            a[0].innerText = 'Entered!';
+            a[0].style.color = 'white'
+            a[0].style.border = '1px solid white'
+            box.style.backgroundColor = 'green'
+        }
+        function toGoOut() {
+            a[0].innerText = 'It went out!';
+            a[0].style.color = 'black'
+            a[0].style.border = '1px solid black'
+            box.style.backgroundColor = 'yellow'
+        }
+    </script>
 </body>
 </html>
