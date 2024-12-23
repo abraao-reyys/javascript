@@ -1,11 +1,10 @@
-var vel = window.document.getElementById('ivel').value
-var calc_button = window.document.getElementsByTagName('input')[type='submit']
+function calcularMulta() {
+    var vel = Number(document.getElementById('ivel').value)
+    var result = document.getElementById('ires');
 
-calc_button.addEventListener('click', calcularMulta)
-
-/* if (vel <= 60) {
-    document.write('Você não tem multas.')
-} else [
-    
-] */
-document.write(vel)
+    if (vel <= 60) {
+        result.innerText('Você não tem multas.');
+    } else {
+        result.innerText(`Você foi multado com um valor de R$ ${vel * 0.5} pelos ${vel} km/h.`);
+    }
+}
