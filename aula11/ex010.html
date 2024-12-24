@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main {
+            width: 480px;
+            padding: 50px;
+            border: 1px solid black;
+        }
+        div#ires {
+            margin-top: 5px;
+            color: white;
+        }
+    </style>
+
     <title>DETRAN</title>
 </head>
 <body>
-    <h1>Sistemas de Multas</h1>
-    <label for="ivel">Digite a velocidade:</label>
-    <input type="number" name="vel" id="ivel">
-    <p style="display: inline;">km/h</p>
-    <input type="submit" value="Enviar" onclick="calcular()">
-    <input type="submit" value="Limpar" onclick="limpar()">
-    <div id="ires">
-
-    </div>
+    <main>
+        <h1>Sistemas de Multas</h1>
+        <label for="ivel">Digite a velocidade:</label>
+        <input type="number" name="vel" id="ivel">
+        <p style="display: inline;">km/h</p>
+        <input type="submit" value="Enviar" onclick="calcular()">
+        <input type="submit" value="Limpar" onclick="limpar()">
+        <div id="ires"></div>
+    </main>
     
     <script src="ex010.js"></script>
 </body>
