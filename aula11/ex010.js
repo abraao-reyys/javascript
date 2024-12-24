@@ -1,10 +1,19 @@
-function calcularMulta() {
-    var vel = Number(document.getElementById('ivel').value)
-    var result = document.getElementById('ires');
+/* function calcular() {
+    var vel = Number(document.getElementById('ivel').value);
+    var ires = document.getElementById('ires');
+    var result = vel * 0.5;
 
+    ires.innerHTML = `O valor da multa é de R$ ${result}!`
+} */
+
+function calcular() {
+    var vel = Number(document.getElementById('ivel').value);
+    var ires = document.getElementById('ires');
+    
     if (vel <= 60) {
-        result.innerText('Você não tem multas.');
+        ires.innerText = 'Essa velocidade não gerou multas.'
     } else {
-        result.innerText(`Você foi multado com um valor de R$ ${vel * 0.5} pelos ${vel} km/h.`);
+        var result = (vel - 60) * 6.2
+        ires.innerText = `Essa velocidade gerou uma multa de R$ ${result}.`
     }
 }
