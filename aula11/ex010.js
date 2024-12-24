@@ -14,6 +14,13 @@ function calcular() {
         ires.innerText = 'Essa velocidade não gerou multas.'
     } else {
         var result = (vel - 60) * 6.2
-        ires.innerText = `Essa velocidade gerou uma multa de R$ ${result}.`
+        ires.innerText = `Essa velocidade gerou uma multa de R$ ${result.toFixed(2)}.`
     }
+}
+
+function limpar() {
+    var vel = document.getElementById('ivel');
+    var ires = document.querySelector('div#ires');
+    vel.value = ''
+    ires.innerHTML = ''
 }
