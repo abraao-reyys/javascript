@@ -1,7 +1,14 @@
-var pais = 'Brasil'
-console.log(`Então você mora em ${pais}!`)
-if (pais != 'Brasil') {
-    console.log('Olá, estrangeiro! Seja bem-vindo ao Brasil.')
-} else {
-    console.log('Olá, Brasiliano! Você está arretado hoje.')
+var start = document.getElementById('isend');
+start.addEventListener('click', boasVindas)
+
+function boasVindas() {
+    var ires = document.querySelector('div#ires');
+    var country = document.getElementById('icou').value;
+    var ires = document.getElementById('ires');
+
+    if (country.toLowerCase() == 'brasil') {
+        ires.innerText = `Então você é da casa! Seja muito bem-vindo de volta.`
+    } else {
+        ires.innerText = `${country}! Que bela viagem. Seja muito bem-vindo. Esperamos que goste do Brasil!`
+    }
 }
