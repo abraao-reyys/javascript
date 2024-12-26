@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Verificador de Idade</title>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <div id="yearborn">
+                <label for="iyear">Ano de Nascimento</label>
+                <input type="number" name="year" id="iyear">
+            </div>
+            <div id="sex">
+                <label for="isex">Sexo:</label>
+                <input type="radio" name="sex" id="isexm">
+                <p style="display: inline;">Masculino</p>
+                <input type="radio" name="sex" id="isexf">
+                <p style="display: inline;">Feminino</p>
+            </div>
+            <input type="submit" value="Verificar">
+        </form>
+        <p>Preencha os dados acima para ver o resultado!</p>
+        <div id="iver">
+            <p style="text-align: center;">Detectado: <br> <span><strong>Homem</strong></span> de <span><strong>4</strong></span> anos.</p>
+            <img src="images/baby-m.jpg" alt="Criança Homem">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; AbraaoReis</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
