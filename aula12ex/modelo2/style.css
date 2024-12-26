@@ -42,8 +42,8 @@ div#hour {
 }
 
 div#img {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     margin: auto;
 
     background-image: url(images/dawn-mod.jpg);
