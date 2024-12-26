@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background-color: rgb(70, 142, 236);
+    background-color: #080705;
 }
 
 header {
@@ -24,10 +24,6 @@ h1 {
 }
 
 main {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-
     width: 60%;
     margin: auto;
     padding: 10px;
@@ -38,13 +34,23 @@ main {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295)
 }
 
+div#hour {
+    margin: 20px 0px;
+
+    font-size: 1.3em;
+    text-align: center;
+}
+
 div#img {
     height: 250px;
     width: 250px;
+    margin: auto;
 
     background-image: url(images/dawn-mod.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    border-radius: 50%;
 }
 
 footer {
