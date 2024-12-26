@@ -24,6 +24,10 @@ h1 {
 }
 
 main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
     width: 60%;
     margin: auto;
     padding: 10px;
@@ -32,6 +36,15 @@ main {
 
     border-radius: 15px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295)
+}
+
+div#img {
+    height: 250px;
+    width: 250px;
+
+    background-image: url(images/dawn-mod.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 footer {
