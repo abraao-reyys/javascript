@@ -52,17 +52,25 @@ function verificar() {
         } else {
             img.src = 'images/old-f.jpg'
         }
-    } else {
+    } else if (age == 2024 || age < 0) {
         box_verif.style.display = 'none'
         txt_verif.style.display = 'block'
-        txt_verif.innerText = 'As informações não foram preenchidas!'
+        txt_verif.innerText = 'As informações não foram preenchidas corretamente!'
+    } else if (age > 120) {
+        box_verif.style.display = 'none'
+        txt_verif.style.display = 'block'
+        txt_verif.innerText = 'Sinto muito, mas ninguém vive mais de 120 anos!'
     }
 }
 
 function limpar() {
     var year_birth = window.document.getElementById('iyear');
+    var selected_sex = window.document.getElementsByName('sex');
     box_verif.style.display = 'none'
     txt_verif.style.display = 'block'
     txt_verif.innerText = 'Preencha os dados acima para ver o resultado!'
     year_birth.value = ''
+    selected_sex.forEach(radio => {
+        radio.checked = false;
+    })
 }
