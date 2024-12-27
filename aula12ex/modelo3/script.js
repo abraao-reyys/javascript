@@ -7,7 +7,7 @@ verif_button.addEventListener('click', verificar)
 clear_button.addEventListener('click', limpar)
 
 function verificar() {
-    var year_birth = Number(window.document.getElementById('iyear').value);
+    var year_birth = parseInt(Number(window.document.getElementById('iyear').value));
     var infodate = new Date();
     var current_year = infodate.getFullYear();
     var age = current_year - year_birth;
@@ -28,7 +28,11 @@ function verificar() {
     box_verif.style.display = 'flex'
     txt_verif.style.display = 'none'
 
-    if (age <= 10) {
+    if (age == 2024 || age < 0 || year_birth < 0) {
+        box_verif.style.display = 'none'
+        txt_verif.style.display = 'block'
+        txt_verif.innerText = 'As informações não foram preenchidas corretamente!'
+    } else if (age >= 0 && age <= 10) {
         if (sex == 'homem') {
             img.src = 'images/baby-m.jpg'
         } else {
@@ -52,10 +56,6 @@ function verificar() {
         } else {
             img.src = 'images/old-f.jpg'
         }
-    } else if (age == 2024 || age < 0 || year_birth < 0) {
-        box_verif.style.display = 'none'
-        txt_verif.style.display = 'block'
-        txt_verif.innerText = 'As informações não foram preenchidas corretamente!'
     } else if (age > 120) {
         box_verif.style.display = 'none'
         txt_verif.style.display = 'block'

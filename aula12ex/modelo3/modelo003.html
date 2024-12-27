@@ -16,6 +16,7 @@
         <div id="yearborn">
             <label for="iyear">Ano de nascimento:</label>
             <input type="number" name="year" id="iyear">
+            <p style="margin-top: 10px; font-size: 0.7em;">(Use apenas números inteiros.)</p>
         </div>
         <div id="sex">
             <label for="isex">Sexo:</label>
@@ -24,8 +25,10 @@
             <input type="radio" name="sex" id="isexf">
             <p style="display: inline;">Feminino</p>
         </div>
-        <input type="submit" value="Verificar" id="isend">
-        <input type="submit" value="Limpar" id="iclear">
+        <div id="sends">
+            <input type="submit" value="Verificar" id="isend">
+            <input type="submit" value="Limpar" id="iclear">
+        </div>
         <p>Preencha os dados acima para ver o resultado!</p>
         <div id="iver">
             <p style="text-align: center;">Detectado: <br> <strong><span id="sexinfo">Homem</span></strong> de <strong><span id="ageinfo">4</span></strong> anos.</p>

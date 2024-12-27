@@ -36,9 +36,8 @@ main {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295)
 }
 
-main > input {
+main > div#sends input {
     width: 100px;
-    margin-bottom: 30px;
     padding: 5px 10px;
     border: 0;
     border-radius: 20px;
@@ -84,6 +83,11 @@ footer {
 
     #yearborn input {
         width: 60px;
+    }
+
+    main div#sends {
+        display: flex;
+        justify-content: space-evenly;
     }
 
     main div#iver img {
