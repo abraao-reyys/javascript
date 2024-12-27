@@ -75,3 +75,17 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 0.8em;
+    }
+
+    #yearborn input {
+        width: 60px;
+    }
+
+    main div#iver img {
+        max-width: 190px;
+    }
+}
