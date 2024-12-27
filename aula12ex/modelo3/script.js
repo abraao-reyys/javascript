@@ -52,7 +52,7 @@ function verificar() {
         } else {
             img.src = 'images/old-f.jpg'
         }
-    } else if (age == 2024 || age < 0) {
+    } else if (age == 2024 || age < 0 || year_birth < 0) {
         box_verif.style.display = 'none'
         txt_verif.style.display = 'block'
         txt_verif.innerText = 'As informações não foram preenchidas corretamente!'
