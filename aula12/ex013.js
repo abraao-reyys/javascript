@@ -1,5 +1,7 @@
 var datainfo = new Date()
+console.log(`A informação de data é: ${datainfo}`)
 var day = datainfo.getDay()
+console.log(`O número do dia é: ${day}`)
 
 switch(day) {
     case 0:
@@ -26,6 +28,9 @@ switch(day) {
     default:
         var day = 'INV'
 }
+
+console.log(`O nome do dia é: ${day}`)
+
 if (day == 'INV') {
     console.log('Dia inválido.')
 } else {
