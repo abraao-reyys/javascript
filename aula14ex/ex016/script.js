@@ -13,11 +13,15 @@ function toCount() {
 
     output_box.innerHTML = ''
 
-    for (start; start <= end; start += step) {
-        output_box.innerHTML += `${start} &#x1F449; `
+    if (start > 500 || end > 500 || step < 1) {
+        output_box.innerHTML = 'Não é aceito valores maiores que 500 e o mínimo para o "passo" é 1.'
+    } else {
+        for (start; start <= end; start += step) {
+            output_box.innerHTML += `${start} &#x1F449; `
+        }
+    
+        output_box.innerHTML += '&#x1F3C1; Fim!'
     }
-
-    output_box.innerHTML += '&#x1F3C1; Fim!'
 }
 
 function toClear() {
