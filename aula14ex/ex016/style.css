@@ -26,12 +26,37 @@ h1 {
 main {
     width: 60%;
     margin: auto;
-    padding: 10px;
+    padding: 50px 30px;
 
     background-color: white;
 
     border-radius: 15px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295)
+}
+
+main div.input-box {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+main div.input-box label {
+    width: 60px;
+}
+
+main div.input-button {
+    margin-bottom: 15px;
+}
+
+main div.input-button input {
+    padding: 5px 15px;
+
+    color: white;
+    background-color: rgb(70, 142, 236);
+
+    border: 0;
+    border-radius: 15px;
+
+    cursor: pointer;
 }
 
 footer {
