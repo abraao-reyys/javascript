@@ -34,9 +34,31 @@ main {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295)
 }
 
+main input.input-button {
+    padding: 5px 15px;
+
+    color: white;
+    background-color: rgb(70, 142, 236);
+
+    border: 0;
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+
+main div#output, div#output p {
+    margin-top: 10px;
+}
+
 footer {
     margin-top: 10px;
     color: white;
     text-align: center;
     font-style: italic;
+}
+
+@media screen and (min-width: 550px) {
+    main {
+        width: 400px;
+    }
 }
