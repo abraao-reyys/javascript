@@ -7,3 +7,5 @@ for (start; start < end; start += step) {
 }
 
 console.log('Fim!')
+
+// Testando a lógica do 'for' para criação do exercício

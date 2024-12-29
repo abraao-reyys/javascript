@@ -14,7 +14,7 @@ function toCount() {
     output_box.innerHTML = ''
 
     if (start > 500 || end > 500 || step < 1) {
-        output_box.innerHTML = 'Não é aceito valores maiores que 500 e o mínimo para o "passo" é 1.'
+        output_box.innerHTML = 'Impossível contar. Limitações: <br> 1. Não são aceitos valores maiores que 500 <br> 2. O mínimo para o "passo" é 1 <br> 3. Não deixe espaços em branco <br> <strong>Reinicie e tente novamente!</strong>'
     } else {
         for (start; start <= end; start += step) {
             output_box.innerHTML += `${start} &#x1F449; `
