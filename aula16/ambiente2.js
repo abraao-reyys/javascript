@@ -1,7 +1,6 @@
-var res = 1
-
 function fatorial(n) {
-    for (let c = n; c != 1; c--) {
+    let res = 1
+    for (let c = n; c > 1; c--) {
         // console.log(`${c} * `)
         process.stdout.write(`${c} * `) // Para deixar na mesma linha do terminal
         res *= c
