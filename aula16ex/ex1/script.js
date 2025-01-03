@@ -10,17 +10,19 @@ var numlist = []
 
 function addNumber() {
     output_box.innerHTML = ''
-    let num = Number(window.document.getElementById('inum').value)
+    let num = window.document.getElementById('inum')
     let op = document.createElement('option')
-    if (numlist.indexOf(num) != -1) {
+    if (numlist.indexOf(num.value) != -1) {
         window.alert('Valor já encontrado na lista.')
-    } else if (num >= 1 && num <= 100) {
-        numlist.push(num)
-        op.text = `Valor ${num} adicionado.`
+    } else if (num.value >= 1 && num.value <= 100) {
+        numlist.push(Number(num.value))
+        op.text = `Valor ${num.value} adicionado.`
         select_list.appendChild(op)
     } else {
         window.alert('Valor inválido.')
     }
+    num.value = ''
+    num.focus()
 }
 
 function analysisFinal() {
