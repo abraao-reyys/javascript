@@ -52,7 +52,11 @@ main input[type='submit'] {
 
 main select {
     margin: 10px 0px;
-    width: 130px;
+    width: 150px;
+}
+
+main div#output-box {
+    margin-top: 15px;
 }
 
 footer {
